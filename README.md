@@ -1,37 +1,18 @@
-## Welcome to GitHub Pages
+# Ares Bortolussi — portfolio
 
-You can use the [editor on GitHub](https://github.com/AresBortolussi/AresBortolussi.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+Portfolio statico in italiano, senza runtime server, framework o risorse esterne. HTML semantico, CSS responsive, JavaScript progressivo. Tutti i contenuti rimangono leggibili senza JavaScript; filtri e tema si attivano solo quando lo script è disponibile.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Anteprima
 
-### Markdown
+`python3 -m http.server 8080` e aprire http://localhost:8080.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Manutenzione
 
-```markdown
-Syntax highlighted code block
+- `index.html`: biografia, progetti, stati e contatti.
+- `assets/modern/site.css`: palette, layout e breakpoint.
+- `assets/modern/site.js`: filtri accessibili e preferenza locale del tema.
+- `docs/CONTENT.md`: perimetro editoriale e aggiornamenti.
 
-# Header 1
-## Header 2
-### Header 3
+Nessun analytics, cookie di tracciamento, font remoto o modulo che raccoglie dati. Il contatto usa il client email dell’utente. La preferenza del tema è salvata nel browser quando consentito.
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/AresBortolussi/AresBortolussi.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+La revisione è proposta in un branch: il sito pubblico cambia solo con il merge. Gli asset e il vecchio CV restano nella storia del repository e non sono presentati come aggiornati.
