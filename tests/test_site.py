@@ -41,8 +41,8 @@ class Site(unittest.TestCase):
         self.assertNotIn('href="https://fonts.', self.source)
         self.assertNotIn('@import', (ROOT/'assets/modern/site.css').read_text())
     def test_progressive_enhancement_and_metadata(self):
-        self.assertIn('class="filters"', self.source)
-        self.assertIn('aria-pressed="true"', self.source)
+        self.assertIn('href="#esperienza"', self.source)
+        self.assertIn('href="mailto:', self.source)
         self.assertIn('name="description"', self.source)
         self.assertIn('application/ld+json', self.source)
         self.assertNotIn('CV_ENG_Ares_Bortolussi.pdf', self.source)
