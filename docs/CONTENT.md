@@ -1,11 +1,9 @@
 # Contenuti e decisioni
 
-Revisione: 22 ottobre 2026. Una pagina statica risponde al bisogno attuale: presentazione, progetti, percorso e contatto. Non servono database, login, CMS o backend.
+Revisione del 26 ottobre 2026. La home è una pagina professionale statica: profilo, attività, progetti, competenze e contatti. La palette corrente integra ciano e magenta saturi, dettagli console e superfici di lettura neutre. `v3/` conserva il confronto delle tre palette; `old1/` e `old2/` conservano le revisioni precedenti.
 
-La pagina distingue ricerca personale, docenza, esercizi e progettazione professionale. Non pubblica nomi dei clienti, architetture riservate, scadenze, documenti aziendali o dichiarazioni di certificazioni/titoli non verificati. Le attività in corso non sono descritte come prodotti consegnati.
+Le attività sono descritte per ambito, senza inventare date contrattuali, qualifiche, certificazioni, datori di lavoro o risultati quantitativi. I nomi dei clienti e le architetture riservate non sono pubblicati. Per completare una cronologia professionale analitica servono CV e link LinkedIn aggiornati e verificati.
 
-Fonti: repository esistenti (API 2025, APE 2021, sito precedente), cartelle Drive autoencoder audio 2024 e corso Python per traduttori 2026, contesto fornito dall’autore per ricerca AI e progettazione 2026. Non sono inventati risultati quantitativi, clienti o incarichi.
+APE è presentato come Visit Ledger, progetto personale nato per gioco durante pranzi con persone del gruppo APE INFN, senza appartenenza o affiliazione. Fielddesk è un'applicazione locale per asset e manutenzioni. Local Context Core è un'implementazione autonoma ispirata al laboratorio AI, non un'esportazione del codice sul Mac. Technical Journal è l'evoluzione del precedente esercizio Django.
 
-Prima di pubblicare: l’autore rivede i testi e le descrizioni professionali tramite la pull request. Il vecchio CV non è collegato: occorre una nuova versione verificata per aggiungerlo. I repository privati sono indicati come tali e non resi pubblici.
-
-Per aggiungere un progetto duplicare una scheda HTML, definire `data-category`, stato, anno e descrizione. Evitare collegamenti a contenuti non disponibili. Nessuna sincronizzazione automatica con cartelle private.
+Lo stato di pubblicazione dei repository resta distinto dalla disponibilità del codice e dai test. Nessun collegamento viene presentato come repository pubblico prima della verifica. L'immagine di profilo non è stata sostituita automaticamente: gli artwork ricercati sono proposte da scegliere.
