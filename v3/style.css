@@ -14,3 +14,8 @@
 :root:not([data-theme=blade]) .section-label>span,:root:not([data-theme=blade]) .eyebrow{color:var(--secondary)}
 :root:not([data-theme=blade]) .monogram{border-color:var(--accent);box-shadow:0 0 25px var(--glow)}
 :root:not([data-theme=blade]) .section{border-image:linear-gradient(90deg,var(--accent),var(--line) 35%,var(--line)) 1}
+
+/* Project notes reuse the homepage palette and reading layout. */
+.case-hero{padding-top:74px;padding-bottom:66px}.case-hero h1{font-size:clamp(42px,7vw,76px);overflow-wrap:anywhere}.case-hero .intro{max-width:700px}.case-status{font:11px/1.8 var(--mono);color:var(--secondary);margin:25px 0 0}.text-link{text-decoration:underline;text-underline-offset:4px}a.project-end:hover{color:var(--accent);background:var(--glow)}
+@media(max-width:760px){.case-hero{padding-top:45px;padding-bottom:45px}}
+@media print{.case-hero{padding:0 0 20px}.case-hero h1{font-size:36px}}
