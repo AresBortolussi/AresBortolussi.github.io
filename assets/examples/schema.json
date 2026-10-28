@@ -1,0 +1,164 @@
+{
+  "dialect": "sqlite",
+  "ir_version": "1.0",
+  "name": null,
+  "sequences": [],
+  "tables": [
+    {
+      "check_constraints": [],
+      "columns": [
+        {
+          "comment": null,
+          "default": null,
+          "is_identity": false,
+          "logical_type": null,
+          "name": "id",
+          "native_type": "INTEGER",
+          "nullable": false
+        },
+        {
+          "comment": null,
+          "default": null,
+          "is_identity": false,
+          "logical_type": null,
+          "name": "title",
+          "native_type": "TEXT",
+          "nullable": false
+        }
+      ],
+      "comment": null,
+      "foreign_keys": [],
+      "indexes": [],
+      "lifecycle": "stable",
+      "name": "books",
+      "primary_key": {
+        "columns": [
+          "id"
+        ],
+        "name": null
+      },
+      "schema_name": "public",
+      "unique_constraints": []
+    },
+    {
+      "check_constraints": [],
+      "columns": [
+        {
+          "comment": null,
+          "default": null,
+          "is_identity": false,
+          "logical_type": null,
+          "name": "id",
+          "native_type": "INTEGER",
+          "nullable": false
+        },
+        {
+          "comment": null,
+          "default": null,
+          "is_identity": false,
+          "logical_type": null,
+          "name": "book_id",
+          "native_type": "INTEGER",
+          "nullable": false
+        },
+        {
+          "comment": null,
+          "default": null,
+          "is_identity": false,
+          "logical_type": null,
+          "name": "member_id",
+          "native_type": "INTEGER",
+          "nullable": false
+        },
+        {
+          "comment": null,
+          "default": null,
+          "is_identity": false,
+          "logical_type": null,
+          "name": "loan_date",
+          "native_type": "TEXT",
+          "nullable": false
+        }
+      ],
+      "comment": null,
+      "foreign_keys": [
+        {
+          "columns": [
+            "book_id"
+          ],
+          "deferrable": false,
+          "name": null,
+          "on_delete": "no_action",
+          "on_update": "no_action",
+          "ref_columns": [
+            "id"
+          ],
+          "ref_schema": null,
+          "ref_table": "books"
+        },
+        {
+          "columns": [
+            "member_id"
+          ],
+          "deferrable": false,
+          "name": null,
+          "on_delete": "no_action",
+          "on_update": "no_action",
+          "ref_columns": [
+            "id"
+          ],
+          "ref_schema": null,
+          "ref_table": "members"
+        }
+      ],
+      "indexes": [],
+      "lifecycle": "stable",
+      "name": "loans",
+      "primary_key": {
+        "columns": [
+          "id"
+        ],
+        "name": null
+      },
+      "schema_name": "public",
+      "unique_constraints": []
+    },
+    {
+      "check_constraints": [],
+      "columns": [
+        {
+          "comment": null,
+          "default": null,
+          "is_identity": false,
+          "logical_type": null,
+          "name": "id",
+          "native_type": "INTEGER",
+          "nullable": false
+        },
+        {
+          "comment": null,
+          "default": null,
+          "is_identity": false,
+          "logical_type": null,
+          "name": "alias",
+          "native_type": "TEXT",
+          "nullable": false
+        }
+      ],
+      "comment": null,
+      "foreign_keys": [],
+      "indexes": [],
+      "lifecycle": "stable",
+      "name": "members",
+      "primary_key": {
+        "columns": [
+          "id"
+        ],
+        "name": null
+      },
+      "schema_name": "public",
+      "unique_constraints": []
+    }
+  ],
+  "views": []
+}

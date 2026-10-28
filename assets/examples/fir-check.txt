@@ -1,0 +1,2 @@
+(report note): FIR C oracle, stalls, reset and saturation passed
+simulation stopped @200ns

@@ -7,6 +7,9 @@ Portfolio professionale statico in italiano: profilo, attività, progetti, compe
 - `index.html`: home pubblicata su GitHub Pages.
 - `v3/style.css` e `v3/site.js`: layout responsive, palette e stampa/PDF tramite browser.
 - `v3/index.html`: confronto delle palette Blade Runner, Neuromante e Altered Carbon.
+- `note/`: tre brevi note sulle scelte tecniche, collegate agli esempi.
+- `assets/examples/`: input inventati, output reali e diagramma generato; provenienza e rigenerazione nel README locale.
+- `scripts/`: generazione degli esempi dai progetti e rendering SVG durante lo sviluppo.
 - `progetti/`: schede pubbliche di SQL Toolkit, Visit Ledger ed Entropy Bridge; il codice dei tre progetti resta privato.
 - `old1/` e `old2/`: copie complete delle due versioni precedenti; disponibili anche come branch omonimi.
 - `docs/`: decisioni editoriali e di progetto.

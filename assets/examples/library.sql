@@ -1,0 +1,10 @@
+CREATE TABLE books (id INTEGER PRIMARY KEY, title TEXT NOT NULL);
+CREATE TABLE members (id INTEGER PRIMARY KEY, alias TEXT NOT NULL);
+CREATE TABLE loans (
+  id INTEGER PRIMARY KEY,
+  book_id INTEGER NOT NULL,
+  member_id INTEGER NOT NULL,
+  loan_date TEXT NOT NULL,
+  FOREIGN KEY (book_id) REFERENCES books(id),
+  FOREIGN KEY (member_id) REFERENCES members(id)
+);

@@ -1,0 +1,44 @@
+{
+  "tools": {
+    "ghdl": "GHDL 6.0.0 (6.0.0.r0.ge589c698c) [Dunoon edition]",
+    "cc": "Apple clang version 21.0.0 (clang-2100.3.34.2)"
+  },
+  "data": "All inputs are invented demonstration fixtures, not personal or customer data.",
+  "commands": [
+    "sqltoolkit import-ddl library.sql -o schema.json",
+    "sqltoolkit validate schema.json",
+    "sqltoolkit erd schema.json",
+    "sqltoolkit docs schema.json",
+    "sqltoolkit sqlite-ddl schema.json",
+    "sqltoolkit plan schema.json",
+    "ape validate --input visits.csv --reader c --format json",
+    "ape stats --input visits.csv --reader c --format json",
+    "ape timeline --input visits.csv --reader c --format json",
+    "cc -shared -fPIC -std=c17 -I include src/dsp.c -o fir.dylib",
+    "ghdl -a --std=08 stream_fir4.vhd tb_stream_fir4.vhd",
+    "ghdl -e --std=08 tb_stream_fir4",
+    "ghdl -r --std=08 tb_stream_fir4 --assert-level=error"
+  ],
+  "source_commits": {
+    "sql-toolkit": "f31818482c6c399c3f8088000a7f22a8ef25bc99",
+    "visit-ledger": "6fadb04080ebc0f5a467aaccdbe0e6a8d46fb0af",
+    "entropy-bridge": "800f2ab272db8866a0aad9156abf745b53dc7ce9"
+  },
+  "sha256": {
+    "README.md": "f19bab97e37aa35bef4aeb925f9fc9908ce7611848433d6cacb6df517414495a",
+    "fir-check.txt": "2c6234b0eaedd6b6f2f2a591538e2140f4f786d9fb784958cdc23b1c124b8ee3",
+    "fir-samples.json": "da70144fea57728dc2416aed9a63d2dd58533370c11b446599f4d7648fe89f19",
+    "generated.sql": "c2bcd577958d420f9a0dd318036be2eb5dbb5a2f5823bbe57012d5b1d91142c0",
+    "library.sql": "4090b34ef824967e78271c3315cb5c2569f7f5212b6df69a68858308401ea83e",
+    "plan.json": "4237ff9b0dfc54346d3b3c92d3f4ccdfe803c4d1950b5ec4855990fa3ce0297c",
+    "schema.dot": "a23690a91c0b8a45ca0428c40fd3ee34b3d25594b01f965e30b5e4bb87b3964f",
+    "schema.json": "c94189c85e7921f35c986d5dad3d628a0f9e9e9a8a3dee41bd3f3cddb3e2761b",
+    "schema.md": "ac3375754e5c43cd4b8488ebc8951337273035580a681aa48a0df9d3cc8fe5f9",
+    "validation.json": "2cb47df984fc77b831589db15a4b7686c5641ace62e4a1ea3d54249a03d2a435",
+    "visits-stats.json": "bf769b8aa1a3953da2d943562a0c93a4aada917a78150b1caa64cc0588390ad7",
+    "visits-stats.txt": "8e3a0942c7d040a6a05df64cb4eea1e4eceaf0a0e338ed78693909cb66f7eeaa",
+    "visits-timeline.json": "6651046ddc2b70ce04712fcfce8d9ba005ef1264825fccf1b78733414412a251",
+    "visits-validation.json": "177fa4f94f4174897b46b02b1d225ee4e8c017891b68076924d31606b3be7797",
+    "visits.csv": "999646632478e49f5cadfdfc92bb98b3aa8cc2bded69b87d41400b038d24379e"
+  }
+}

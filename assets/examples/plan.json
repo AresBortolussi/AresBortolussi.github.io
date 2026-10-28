@@ -1,0 +1,19 @@
+{
+  "creation_order": [
+    "public.books",
+    "public.members",
+    "public.loans"
+  ],
+  "cycles": [],
+  "deferred_foreign_keys": [],
+  "drop_order": [
+    "public.loans",
+    "public.members",
+    "public.books"
+  ],
+  "external_dependencies": [],
+  "is_safe": true,
+  "scope": "structural dependency plan; not executable or dialect-approved",
+  "self_references": [],
+  "warnings": []
+}

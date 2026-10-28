@@ -1,0 +1,9 @@
+digraph schema {
+  rankdir=LR;
+  node [shape=box];
+  "public.books" [label="public.books\nid: INTEGER\ntitle: TEXT"];
+  "public.loans" [label="public.loans\nid: INTEGER\nbook_id: INTEGER\nmember_id: INTEGER\nloan_date: TEXT"];
+  "public.loans" -> "public.books" [label="book_id"];
+  "public.loans" -> "public.members" [label="member_id"];
+  "public.members" [label="public.members\nid: INTEGER\nalias: TEXT"];
+}
