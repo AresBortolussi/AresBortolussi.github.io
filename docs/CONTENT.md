@@ -7,3 +7,10 @@ Le attività sono descritte per ambito, senza inventare date contrattuali, quali
 APE è presentato come Visit Ledger, progetto personale nato per gioco durante pranzi con persone del gruppo APE INFN, senza appartenenza o affiliazione. Fielddesk è un'applicazione locale per asset e manutenzioni. Local Context Core è un'implementazione autonoma ispirata al laboratorio AI, non un'esportazione del codice sul Mac. Technical Journal è l'evoluzione del precedente esercizio Django.
 
 Lo stato di pubblicazione dei repository resta distinto dalla disponibilità del codice e dai test. Nessun collegamento viene presentato come repository pubblico prima della verifica. L'immagine di profilo non è stata sostituita automaticamente: gli artwork ricercati sono proposte da scegliere.
+
+## Revisione del 29 ottobre 2026
+
+La parte professionale è ora fondata sul CV di gennaio 2026 recuperato e sulle
+informazioni aggiornate direttamente dall'utente sul ruolo Analyst & Architect
+in GSNET Italia. Vedere PROFILE_SOURCES_2026-10-29.md. Il sito collega una nuova
+sintesi professionale e un PDF pubblico dedicato, senza riutilizzare il CV storico.

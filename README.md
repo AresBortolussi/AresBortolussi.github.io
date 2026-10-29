@@ -1,10 +1,11 @@
 # Ares Bortolussi — Systems, AI & Technical Education
 
-Portfolio professionale statico in italiano: profilo, attività, progetti, competenze e contatti. La versione corrente usa una palette ciano/magenta su fondo scuro, con dettagli console e struttura da CV consultabile.
+Portfolio professionale statico in italiano: Analyst & Architect in GSNET Italia, consulenza tecnico-scientifica, leadership tecnica, cybersecurity, formazione e progetti personali. La versione corrente usa una palette ciano/magenta su fondo scuro, con dettagli console e struttura da CV consultabile.
 
 ## Struttura
 
-- `index.html`: home pubblicata su GitHub Pages.
+- `index.html`: home pubblicata su GitHub Pages, con esploratore delle decisioni.
+- `percorso.html`: sintesi professionale con filtri per ambito; il PDF pubblico in `assets/cv/` deriva da questa pagina.
 - `v3/style.css` e `v3/site.js`: layout responsive, palette e stampa/PDF tramite browser.
 - `v3/index.html`: confronto delle palette Blade Runner, Neuromante e Altered Carbon.
 - `note/`: tre brevi note sulle scelte tecniche, collegate agli esempi.

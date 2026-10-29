@@ -13,3 +13,25 @@
 Esecuzione dei controlli statici: `python3 -m unittest discover -s tests -v`. Il browser non ha verificato l’invio di email né una nuova pubblicazione GitHub Pages. Il merge della pull request è separato dalla preparazione della revisione.
 
 ![Anteprima desktop](previews/desktop.jpg)
+
+## Revisione professionale e interazioni — 29 ottobre 2026
+
+Quattro test statici passati; home, pagina percorso, tre note e tre schede
+verificate con Chrome headless / Playwright a 390 e 1440 px: nessun overflow di
+pagina, errore JavaScript, immagine mancante o duplicazione dell'h1. Riferimenti
+locali e ancore controllati su tutte le otto pagine correnti.
+
+Esploratore delle decisioni: cambio pannello tramite click e tastiera, frecce,
+Home/End, ruoli tab/tabpanel, stato selezionato e orientamento responsive.
+Filtri CV: selezione hardware (due esperienze), cybersecurity (ruolo corrente),
+ripristino del percorso completo. La stampa include tutte le dieci esperienze
+anche se un filtro è attivo. Senza JavaScript tutti i pannelli e le esperienze
+restano leggibili; i controlli aggiuntivi rimangono nascosti.
+
+Verificato anche prefers-reduced-motion; nessuno scorrimento intercettato o storage
+locale introdotto. Il sito mantiene zero dipendenze runtime remote e zero analytics.
+Screenshot desktop/mobile ispezionati. PDF A4 di due pagine estratto e renderizzato
+per controllo visivo: ruolo corrente presente, informazioni personali superflue
+assenti, formazione e competenze presenti. Corretta anche la precedenza della
+palette di stampa, che ora usa testo scuro su sfondo bianco indipendentemente
+dal tema scelto per il sito. Nessuna certificazione di accessibilità implicata.
