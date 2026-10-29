@@ -22,3 +22,11 @@ Nessun backend, database, font remoto, analytics o tracciamento. Navigazione e c
 `python3 -m http.server 8080`, quindi aprire `http://localhost:8080`. Controlli strutturali: `python3 -m unittest discover -s tests -v`. I test non sostituiscono una revisione di accessibilità con utenti reali.
 
 Il nome del repository resta `AresBortolussi.github.io` per mantenere l'indirizzo GitHub Pages.
+
+## Mappa del repository
+
+La [mappa delle cartelle](DIRECTORY_MAP.md) collega le guide dei percorsi mantenuti.
+
+La home include anche una mappa del metodo a cinque passaggi e percorsi di contatto
+per consulenza, formazione e collaborazioni. Il caso SQL Toolkit collega decisioni
+e risultati eseguiti sul dataset dimostrativo.

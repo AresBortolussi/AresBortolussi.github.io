@@ -10,6 +10,7 @@ import json
 import os
 from pathlib import Path
 import shutil
+import sqlite3
 import subprocess
 import tempfile
 
@@ -45,6 +46,21 @@ CREATE TABLE loans (
             outputs[name]=run([cli,command,model])
         commands+=['sqltoolkit import-ddl library.sql -o schema.json','sqltoolkit validate schema.json','sqltoolkit erd schema.json','sqltoolkit docs schema.json','sqltoolkit sqlite-ddl schema.json','sqltoolkit plan schema.json']
         for name,content in outputs.items(): (OUT/name).write_text(content)
+        connection=sqlite3.connect(':memory:')
+        ddl=outputs['generated.sql']
+        connection.executescript(ddl)
+        connection.execute("INSERT INTO books(id,title) VALUES(1,'Libro dimostrativo')")
+        connection.execute("INSERT INTO members(id,alias) VALUES(1,'Demo')")
+        connection.execute("INSERT INTO loans(id,book_id,member_id,loan_date) VALUES(1,1,1,'2026-10-29')")
+        rejected=False
+        try:
+            connection.execute("INSERT INTO loans(id,book_id,member_id,loan_date) VALUES(2,999,1,'2026-10-29')")
+        except sqlite3.IntegrityError:
+            rejected=True
+        verification={'dataset':'invented library schema; temporary in-memory SQLite database','sqlite_version':sqlite3.sqlite_version,'generated_ddl_sha256':hashlib.sha256(ddl.encode()).hexdigest(),'tables':connection.execute("select count(*) from sqlite_master where type='table'").fetchone()[0],'foreign_keys':len(connection.execute('PRAGMA foreign_key_list(loans)').fetchall()),'valid_loan_inserted':connection.execute('select count(*) from loans').fetchone()[0]==1,'invalid_reference_rejected':rejected}
+        assert verification['tables']==3 and verification['foreign_keys']==2 and rejected
+        (OUT/'sqlite-verification.json').write_text(json.dumps(verification,indent=2)+'\n')
+        connection.close()
         data=tmp/'visits.csv'
         data.write_text('''restaurant,date,time,name,cost,vote
 Forno Aurora,2026-09-05,13:00,Demo,12.50,4.0

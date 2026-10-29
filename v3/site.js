@@ -97,3 +97,39 @@ function scheduleProgress() {
 window.addEventListener('scroll', scheduleProgress, { passive: true });
 window.addEventListener('resize', scheduleProgress, { passive: true });
 updateProgress();
+
+// Method map: every stage has a concrete example and remains readable without JS.
+const methodSteps = document.querySelector('.method-steps');
+if (methodSteps) {
+  const tabs = [...methodSteps.querySelectorAll('[data-method]')];
+  const panels = [...document.querySelectorAll('[data-method-panel]')];
+  function chooseStage(index, focus = false) {
+    tabs.forEach((tab, i) => {
+      tab.setAttribute('aria-selected', String(i === index));
+      tab.tabIndex = i === index ? 0 : -1;
+    });
+    panels.forEach((panel, i) => { panel.hidden = i !== index; });
+    if (focus) tabs[index].focus();
+  }
+  methodSteps.setAttribute('role', 'tablist');
+  tabs.forEach((tab, i) => {
+    tab.setAttribute('role', 'tab');
+    const panel = document.getElementById(tab.getAttribute('aria-controls'));
+    panel.setAttribute('role', 'tabpanel');
+    panel.setAttribute('aria-labelledby', tab.id);
+    panel.tabIndex = 0;
+    tab.addEventListener('click', () => chooseStage(i));
+    tab.addEventListener('keydown', event => {
+      let next;
+      if (event.key === 'ArrowRight') next = (i + 1) % tabs.length;
+      else if (event.key === 'ArrowLeft') next = (i - 1 + tabs.length) % tabs.length;
+      else if (event.key === 'Home') next = 0;
+      else if (event.key === 'End') next = tabs.length - 1;
+      else return;
+      event.preventDefault();
+      chooseStage(next, true);
+    });
+  });
+  chooseStage(0);
+  methodSteps.hidden = false;
+}

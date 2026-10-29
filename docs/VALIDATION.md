@@ -35,3 +35,20 @@ per controllo visivo: ruolo corrente presente, informazioni personali superflue
 assenti, formazione e competenze presenti. Corretta anche la precedenza della
 palette di stampa, che ora usa testo scuro su sfondo bianco indipendentemente
 dal tema scelto per il sito. Nessuna certificazione di accessibilità implicata.
+
+## Caso di studio e mappa del metodo — 29 ottobre 2026
+
+Caso SQL Toolkit ampliato con esigenza, vincoli, trade-off, architettura e prova
+SQLite. Il DDL pubblicato è stato eseguito in un database temporaneo in memoria:
+3 tabelle, 2 chiavi esterne, inserimento valido accettato e riferimento inesistente
+rifiutato. Il report è assets/examples/sqlite-verification.json; il generatore
+degli esempi riproduce anche questa prova.
+
+Home: mappa a cinque passaggi navigabile con tastiera (frecce, Home/End), tre
+percorsi mailto e ritratto riutilizzato dal sito storico senza modificarlo. Nessun
+messaggio inviato automaticamente. Tutti i passaggi restano leggibili senza JS.
+
+Verificati home, caso SQL e percorso a 390/1440 px: nessun errore JavaScript,
+overflow di pagina o immagine mancante; riferimenti locali controllati. Screenshot
+ispezionati. Cartelle storiche old1/old2 preservate. Guide README aggiunte ai percorsi
+correnti del sito e collegate dalla mappa delle cartelle.

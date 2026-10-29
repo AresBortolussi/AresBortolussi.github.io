@@ -1,0 +1,9 @@
+{
+  "dataset": "invented library schema; temporary in-memory SQLite database",
+  "sqlite_version": "3.54.0",
+  "generated_ddl_sha256": "c2bcd577958d420f9a0dd318036be2eb5dbb5a2f5823bbe57012d5b1d91142c0",
+  "tables": 3,
+  "foreign_keys": 2,
+  "valid_loan_inserted": true,
+  "invalid_reference_rejected": true
+}
